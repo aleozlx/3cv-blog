@@ -2,4 +2,4 @@
 title: author
 ---
 
-**Mr. Gatsby** Proin ornare ligula eu tellus tempus elementum. Aenean [bibendum](/) iaculis mi, nec blandit lacus interdum vitae. Vestibulum non nibh risus, a scelerisque purus. :hearts:
+**Alex**, currently a PhD Student in Computer Science, who focusing on Computer Vision, Machine Learning, General Purpose GPU Computing, High Performance Computing.
