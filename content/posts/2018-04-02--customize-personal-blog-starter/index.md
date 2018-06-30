@@ -2,6 +2,7 @@
 title: How to customize the PersonalBlog starter's appearance
 subTitle: GatsbyJS starter instruction
 cover: photo-1463852247062-1bbca38f7805-cover.jpg
+category: "test"
 ---
 
 The [starter](/gatsby-starter-personal-blog/) uses a theme object so base customization is really easy.
