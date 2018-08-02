@@ -4,6 +4,7 @@ import Main from "../components/Main/";
 import { connect } from "react-redux";
 require("core-js/fn/array/find");
 require("prismjs/themes/prism-okaidia.css");
+require("katex/dist/katex.min.css");
 
 import { setNavigatorPosition, setNavigatorShape } from "../state/store";
 import { moveNavigatorAside } from "../utils/shared";
