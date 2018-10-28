@@ -2,7 +2,7 @@
 title: How to undo with Git
 subTitle: Quick tips to recover data using Git
 cover: git.png
-category: "Tips"
+category: "Tips&Tricks"
 ---
 
 If you care enough to click into this, I'm sorry to hear about what's happened.
