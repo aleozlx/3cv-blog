@@ -8,11 +8,11 @@ category: "Tips&Tricks"
 ## Intro
 
 ArchLinux isn't as general as other Linux distributions.
-Usually some software does not actively support ArchLinux. Instead, it may be lucky to be supported.
+Usually, some software does not actively support ArchLinux. Instead, it may be lucky to be supported.
 Reasonably, GCP doesn't officially provide Arch images either.
-That is because ArchLinux is built to be customized and personalized, and Arch users run their own risk of putting up with a fiddly system that can potentially crash any day if not enough care was taken, and they have entirely themselves to blame, because all the official packages are stable and optimized to be fair.
-I thought it would be nice to have a cloud environment where I can experiment new ideas of building my system.
-The goal here is develop a way to build a reasonably confortable-to-use base image with Google Cloud.
+That is because ArchLinux is built to be customized and personalized, and Arch users run their own risk of putting up with a fiddly system that can potentially crash any day if not enough care was taken, and they have entirely themselves to blame because all the official packages are stable and optimized to be fair.
+I thought it would be nice to have a cloud environment where I can experiment with new ideas for building my system.
+The goal here is to develop a way to build a reasonably comfortable-to-use base image with Google Cloud.
 
 ## Ingredients
 
@@ -101,13 +101,20 @@ locale-gen
 ME=alex
 useradd ${ME}
 echo "${ME} All=(ALL) NOPASSWD:ALL" > "/etc/sudoers.d/${ME}"
+mkdir -p "/home/${ME}"
+chown alex:alex "/home/${ME}"
 ```
 
-Set a password too for ssh access. Enable sshd by the way.
+### Enable ethernet & ssh
 
-```
+```sh
+ETH=$(ip -o link show | awk -F': ' '{print $2}' | grep '^e')
+sed -e "s/^Interface=.*/Interface=${ETH}/" /etc/netctl/examples/ethernet-dhcp > "/etc/netctl/${ETH}-profile"
+netctl enable "${ETH}-profile"
 systemctl enable sshd
 ```
+
+> Make sure a password or a key is set.
 
 ### Edit grub and fstab config for GCP console
 
@@ -154,3 +161,4 @@ gsutil cp arch-linux.tar.gz gs://BUCKET_NAME_HERE/os-images
 ## Step 4: Create a New GCP Image and a Test VM
 
 Now you should be able to easily create these from GCP Console.
+GCP won't be able to transfer project-wide key into this instance, so access it directly with ssh.
