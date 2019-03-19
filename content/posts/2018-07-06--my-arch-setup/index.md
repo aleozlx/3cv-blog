@@ -101,11 +101,11 @@ mkfs.ext4 ${DEVICE}
 *ref*. https://github.com/zfsonlinux/zfs/wiki/Signing-Keys
 
 ```sh
-gpg --keyserver pgp.mit.edu --recv C77B9667
-gpg --keyserver pgp.mit.edu --recv D4598027
-gpg --keyserver pgp.mit.edu --recv C6AF658B
+#gpg --keyserver pgp.mit.edu --recv C77B9667
+#gpg --keyserver pgp.mit.edu --recv D4598027
+#gpg --keyserver pgp.mit.edu --recv C6AF658B
 sudo pacman -S patch
-yaourt -S zfs-linux
+yay -S zfs-linux
 sudo systemctl enable zfs.target
 sudo systemctl enable zfs-import-cache
 sudo systemctl enable zfs-mount
