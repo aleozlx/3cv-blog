@@ -5,8 +5,6 @@ cover: git.png
 category: "Tips&Tricks"
 ---
 
-If you care enough to click into this, I'm sorry to hear about what's happened.
-
 Git is a **version control system** that tracks your project's changes over time and supports concurrent development workflow.
 
 If you are actively using Git for your project, chances are that whatever you want to recover is actually sitting in some commit history of some branch at some local or remote location. That is not to say you are immune from loss of data, especially without a backup system, but odds of getting them back are pretty good. So we shall walk through common scenarios and answer how.
