@@ -13,7 +13,7 @@ module.exports = {
   authorTwitterAccount: "aleozlx",
   // info
   infoTitle: "Alex Yang",
-  infoTitleNote: "PhD Student",
+  infoTitleNote: "PhD Candidate",
   // manifest.json
   manifestName: "3cv-research",
   manifestShortName: "3cv-research", // max 12 characters

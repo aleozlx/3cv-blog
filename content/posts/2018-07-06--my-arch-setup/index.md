@@ -2,7 +2,7 @@
 title: My Arch systems quick manual
 subTitle: A single-page documentation for my Arch Linux systems
 cover: arch.png
-category: "Tips"
+category: "Tips&Tricks"
 ---
 
 # Backup
