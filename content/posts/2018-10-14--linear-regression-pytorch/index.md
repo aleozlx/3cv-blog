@@ -53,65 +53,70 @@ Training is the procedure where the model learns how to do that, given data samp
 
 `X` is capitalized because most training data contain multiple features, i.e. the input has many components, to form a matrix.
 The capital case is to remind us this is a matrix, known as a **data matrix**, where rows are samples and columns are features.
-The table (from Safety recalls reported to NHTSA) below can be an example of a data matrix.
+The table (from the UCI wine dataset) below can be an example of a data matrix.
+
+<style>
+  table.dataframe {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+  .dataframe tbody tr th:only-of-type {
+    vertical-align: middle;
+  }
+  .dataframe tbody tr th {
+    vertical-align: top;
+  }
+  .dataframe thead th {
+    text-align: right;
+  }
+</style>
 
 <table class="dataframe">
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>NHTSA Campaign</th>
-      <th>Manufacturer Campaign</th>
-      <th>Vehicle Model</th>
-      <th>Model Year</th>
-      <th>Vehicle Manufacturer</th>
-      <th>Recall Component</th>
+      <th>density</th>
+      <th>pH</th>
+      <th>sulphates</th>
+      <th>alcohol</th>
     </tr>
   </thead>
   <tbody>
     <tr>
+      <th>0</th>
+      <td>1.0010</td>
+      <td>3.00</td>
+      <td>0.45</td>
+      <td>8.8</td>
+    </tr>
+    <tr>
       <th>1</th>
-      <td>02V288000</td>
-      <td>02S41</td>
-      <td>FOCUS</td>
-      <td>2001</td>
-      <td>FORD MOTOR COMPANY</td>
-      <td>ELECTRICAL SYSTEM:BATTERY:CABLES</td>
+      <td>0.9940</td>
+      <td>3.30</td>
+      <td>0.49</td>
+      <td>9.5</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>02V288000</td>
-      <td>02S41</td>
-      <td>FOCUS</td>
-      <td>2000</td>
-      <td>FORD MOTOR COMPANY</td>
-      <td>ELECTRICAL SYSTEM:BATTERY:CABLES</td>
+      <td>0.9951</td>
+      <td>3.26</td>
+      <td>0.44</td>
+      <td>10.1</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>02V236000</td>
-      <td>NaN</td>
-      <td>FT EAGLE 10 SG</td>
-      <td>2003</td>
-      <td>JAYCO, INC.</td>
-      <td>EQUIPMENT:OTHER:LABELS</td>
+      <td>0.9956</td>
+      <td>3.19</td>
+      <td>0.40</td>
+      <td>9.9</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>02V237000</td>
-      <td>NaN</td>
-      <td>ADMIRAL SE</td>
-      <td>2003</td>
-      <td>MONACO COACH CORP.</td>
-      <td>STRUCTURE</td>
-    </tr>
-    <tr>
-      <th>5</th>
-      <td>02V237000</td>
-      <td>NaN</td>
-      <td>ADMIRAL SE</td>
-      <td>2002</td>
-      <td>MONACO COACH CORP.</td>
-      <td>STRUCTURE</td>
+      <td>0.9956</td>
+      <td>3.19</td>
+      <td>0.40</td>
+      <td>9.9</td>
     </tr>
   </tbody>
 </table>
@@ -121,30 +126,24 @@ The table (from Safety recalls reported to NHTSA) below can be an example of a d
 <table class="dataframe">
   <thead>
     <tr style="text-align: right;">
-      <th></th>
-      <th>Vehicle Make</th>
+      <th>quality</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th>1</th>
-      <td>FORD</td>
+      <td>6</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>FORD</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>JAYCO</td>
+      <td>5</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>HOLIDAY RAMBLER</td>
+      <td>6</td>
     </tr>
     <tr>
-      <th>5</th>
-      <td>HOLIDAY RAMBLER</td>
+      <td>4</td>
     </tr>
   </tbody>
 </table>
