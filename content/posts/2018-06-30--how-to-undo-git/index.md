@@ -95,7 +95,7 @@ If you are smart enough to commit things into a wrong branch like me, you could 
 Then it is possible that your mistake is also distributed to others. That's why a recommended remedy would be to make a new commit where you undo these changes, although the commit history keeps moving forward.
 You may look up `git revert`, which will create forward commits in order to revert a commit.
 
-## What if I committed something really stupid and I need to remove it from commit history?
+## How to retroactively remove a git-commit from commit history?
 
 This applies, for example, when you have committed sentitive data or some gigabytes of dataset into the repository. Here's how to delete them:
 
@@ -114,7 +114,7 @@ git filter-branch --tree-filter 'rm -rf PATH-TO-YOUR-SENSITIVE-DATA' HEAD
 See https://help.github.com/articles/removing-sensitive-data-from-a-repository/  
 See also https://blog.ostermiller.org/git-remove-from-history
 
-If you need to rewrite commit history, you would also need to use `git push -f` to force a git-push.
+If you need to rewrite commit history, you would also need to use `git push -f` to force a git-push assuming appropriate permissions.
 
 ## A comprehensive guide on undoing Git
 

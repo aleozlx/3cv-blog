@@ -256,30 +256,30 @@ for epoch in range(100):
 Setting the two partial derivatives to 0, we can find the optimal point via the following equation system:
 
 $$
-\partial_a e(a, b) = -\frac{2}{N} \sum_{i=1}^n {(y_i - (ax_i+b)) x_i } = 0 
+\frac{\partial}{\partial a} e(a, b) = -\frac{2}{N} \sum_{i=1}^n {(y_i - (ax_i+b)) x_i } = 0 
 $$
 
 $$
-\partial_b e(a, b) = -\frac{2}{N} \sum_{i=1}^n {(y_i - (ax_i+b)) } = 0
+\frac{\partial}{\partial b} e(a, b) = -\frac{2}{N} \sum_{i=1}^n {(y_i - (ax_i+b)) } = 0
 $$
 
 But to solve this linear equation system, we practically have to load the entire data matrix and prediction target into memory,
 which will physically limit the scale of the problem we could apply this to.
 Regardless of the complexity of the model, we do not want such limitation to the training approach.
 
-Considering the reverse direction of the gradients $ -(\partial_a e, \partial_b e) $, which can still gradually lead the model towards the optimal point,
+Considering the reverse direction of the gradients $ -(\frac{\partial}{\partial a} e, \frac{\partial}{\partial b} e) $, which can still gradually lead the model towards the optimal point,
 we can use it to develop an iterative approach to update the parameters.
 
 $$
-a \leftarrow a - \gamma \partial_a e
+a \leftarrow a - \gamma \frac{\partial}{\partial a} e
 $$
 
 $$
-b \leftarrow b - \gamma \partial_a e
+b \leftarrow b - \gamma \frac{\partial}{\partial b} e
 $$
 
-Intuitively, $\partial_a e$ is the rate of change in $e$ caused by change in $a$, which indicates the part where error in $a$ is contributing to total error $e$.
-So, why don't we correct $a$ by an amount that is proportional to $\partial_a e$?
+Intuitively, $\frac{\partial}{\partial a} e$ is the rate of change in $e$ caused by change in $a$, which indicates the part where error in $a$ is contributing to total error $e$.
+So, why don't we correct $a$ by an amount that is proportional to $\frac{\partial}{\partial b} e$?
 Taking into account that this correction will be nowhere near perfect because we will be using paritial data in the interative approach,
 a factor $\gamma$ is multiplied to the correction which will also affect the speed of learning a.k.a the learning rate.
 

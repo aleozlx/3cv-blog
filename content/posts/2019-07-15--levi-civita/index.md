@@ -15,7 +15,7 @@ The Levi-Civita symbol precisely captures this computational pattern and facilit
 
 ## Three dimensions
 
-**Definition:** The tensor $\epsilon_{rst}$ takes values from $\{0,1,-1\}$, where the component is equal to $-1$ when its indices are a odd permutation, $1$ when even permutation, and $0$ everywhere else.
+**Definition:** The (pseudo-)tensor $\epsilon_{rst}$ takes values from $\{0,1,-1\}$, where the component is equal to $-1$ when its indices are a odd permutation, $1$ when even permutation, and $0$ everywhere else.
 
 This is easy to construct with a computer program.
 
