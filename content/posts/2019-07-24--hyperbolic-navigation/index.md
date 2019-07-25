@@ -5,7 +5,7 @@ cover: LA.png
 category: "Maths"
 ---
 
-Word has it, this was how navigation systems works in the world wars.
+Word has it, this was how navigation systems worked in the world wars.
 It was designed for the scenario where the time is only synchronized between base stations whereas not necessarily the case between any base station and the target to be localized.
 This navigation scheme usually was used with some inherent ambiguity, which also required an elimination strategy,
 but today we are going to study it without such assumption.
@@ -82,8 +82,50 @@ $$
 f_{\iota(i, j)} = \frac{|S_i-S_j|}{2}
 $$
 
-In quadratic form, the intersection of conics simultaneously satisfies the system of equations:
+In quadratic form, the intersections of conics $C_\iota$ simultaneously satisfy the system of equations:
 
 $$
 X^T C_\iota X = 0
 $$
+
+> For some theoratical background on the solution (called an algebraic variety) to this, see also
+> * https://math.stackexchange.com/questions/2542039/solving-a-system-of-generic-quadratic-forms
+> * https://math.stackexchange.com/questions/1767225/algorithm-intersection-of-two-conics
+
+With two station pairs (two hyperbola equations), this _generally_ results in 4 solutions:
+
+![4 solutions](p4.png)
+
+This picture has showed how the hyperbolas between $S_1$ and $S_2$, and between $S_2$ and $S_3$ intersect.
+
+But we know that from $n$ stations we can form at most $\frac{n (n-1)}{2}$ pairs, like this:
+
+![2 solutions](p2.png)
+
+This picture has showed how the hyperbolas between any pair of the 3 stations intersect, which _generally_ results in 2 solutions (where all 3 hyperbolas intersect).
+
+In fact the ambiguity is almost maximized when the target is inside of the triangle region formed by the 3 stations, because then, both of them are "somewhere inside".
+To eliminate the ambiguity, we can either add more stations or break the symmetry, so that only one of them can be practically true.
+For example, changing the configuration from an eqilateral triangle to a bilateral triangle:
+
+![2 solutions](p2-1.png)
+
+Now the false solution is too close to the stations and is also on the other side of the x-axis.
+
+![2 solutions](p2-2.png)
+
+Or have the stations in the same line, then the solutions will be reflective about the line and clearly separated.
+The downside being, if the target can actually go to the other side of the 3 stations, then there is no way to distinguish which side like this.
+
+If the locations of the station can be dynamic, we can also create a degenerate case where there is a unique solution, for example:
+
+![2 solutions](p1.png)
+
+I can have the target be aligned with two of the stations and this creates a unique solution.
+Imagine if the 3 stations were installed on a rotatable platform, then this should be feasible.
+In fact, using some tracking and filtering technique, it should be enough to produce a unique and precise location of the target.
+
+Lastly, I share with you this experiment made on GeoGebra:
+
+https://www.geogebra.org/graphing/rhjsvpsh
+
