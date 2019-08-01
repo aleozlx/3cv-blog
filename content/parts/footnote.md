@@ -2,5 +2,5 @@
 title: footnote
 ---
 
-I want to become a person who creates and inspires, to pursue curiosity, which makes me happy.
+Nah, Curiosity is the cat, and she is DESPERATE. And I have to keep her alive even at the cost of the universe...
 Special thanks to [@greglobinski](https://twitter.com/greglobinski) for the open sourcing this beautiful blog template.
