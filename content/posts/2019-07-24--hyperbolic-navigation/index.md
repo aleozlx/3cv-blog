@@ -96,13 +96,13 @@ With two station pairs (two hyperbola equations), this _generally_ results in 4 
 
 ![4 solutions](p4.png)
 
-This picture has showed how the hyperbolas between $S_1$ and $S_2$, and between $S_2$ and $S_3$ intersect.
+This picture has shown how the hyperbolas between $S_1$ and $S_2$, and between $S_2$ and $S_3$ intersect.
 
 But we know that from $n$ stations we can form at most $\frac{n (n-1)}{2}$ pairs, like this:
 
 ![2 solutions](p2.png)
 
-This picture has showed how the hyperbolas between any pair of the 3 stations intersect, which _generally_ results in 2 solutions (where all 3 hyperbolas intersect).
+This picture has shown how the hyperbolas between any pair of the 3 stations intersect, which _generally_ results in 2 solutions (where all 3 hyperbolas intersect).
 
 In fact the ambiguity is almost maximized when the target is inside of the triangle region formed by the 3 stations, because then, both of them are "somewhere inside".
 To eliminate the ambiguity, we can either add more stations or break the symmetry, so that only one of them can be practically true.
