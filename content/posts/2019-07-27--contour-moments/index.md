@@ -25,6 +25,8 @@ without loss of generosity, we assume the contour $C$ passes through the origin,
 
 **Example 1**
 
+![Example 1](ex1.png)
+
 $$
 A = \frac{1}{2} (0-0 + 0-0 + 1 \times 2 - 0) = 1
 $$
@@ -44,11 +46,15 @@ $$
 
 **Example 2**
 
+![Example 2](ex2.png)
+
 $$
 A = \frac{1}{2} \left(\left|\begin{matrix}1&&-1\\3&&0\end{matrix}\right| + \left|\begin{matrix}3&&0\\1&&1\end{matrix}\right|\right) = 3
 $$
 
 **Example 3**
+
+![Example 3](ex3.png)
 
 $$
 A = \sum_i A\left(P_{i-1}, P_i\right) = \frac{1}{2} \sum_i \det \left(\begin{matrix}P_{i-1}^T\\P_i^T\end{matrix}\right)
@@ -60,4 +66,58 @@ $$
 A = \frac{1}{2} \oint_C \det \left(\begin{matrix}x&&y\\x+dx&&y+dy\end{matrix}\right)
 = \frac{1}{2} \oint_C (x \mathrm{d}y - y \mathrm{d}x)
 = \iint_D \mathrm{d}x\mathrm{d}y
+$$
+
+## Calculate other moments using Green's theorem
+
+$$
+\oint_C Ldx + Mdy = \iint_D \left(\frac{\partial M}{\partial x} -\frac{\partial L}{\partial y}\right) \mathrm{d}x \mathrm{d}y
+$$
+
+$$
+\oint_C f(x,y) \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right) = \iint_{\textbf{p} \in D} \left(\nabla f \cdot \textbf{p} + 2f \right)\mathrm{d}x \mathrm{d}y
+$$
+
+**First Order**
+
+$$
+\nabla f \cdot \textbf{p} + 2f = x
+$$
+
+By a comparison of the left handside and right handside of the equation,
+
+$$
+\nabla f = (c, 0) \Rightarrow f(x,y)=cx
+$$
+
+By back substitution, we can obtain:
+
+$$
+c=\frac{1}{3}
+$$
+
+In conclusion, the first order moment can be calculated as:
+
+$$
+M_{10}=\frac{1}{3} \oint_C x \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right)
+$$
+
+In a discrete form, it is found to be equivalent to:
+
+$$
+M_{10}=\frac{1}{3} \sum_i \frac{1}{2} (P_i + P_{i-1})^T \textbf{e}_1 \det \left(\begin{matrix}P_{i-1}^T\\P_i^T\end{matrix}\right)
+$$
+
+But in general, it is relatively simple to obtain the continuous form of contour moments by solving a differential equation, much harder to derive the discrete form from the continuous form.
+
+**Second Order**
+
+Using a similar technique,
+
+$$
+M_{20}=\frac{1}{4} \oint_C x^2 \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right)
+$$
+
+$$
+M_{11}=\frac{1}{4} \oint_C xy \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right)
 $$
