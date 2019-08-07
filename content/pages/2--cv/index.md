@@ -3,11 +3,34 @@ title: Curriculum Vitae
 menuTitle: Curriculum Vitae
 ---
 
+# 2019
+
+`07` Started a Superpixel Analyser project.
+
+`06` FuzzIEEE tutorial session [[Fuzzy Fusion of Decisions from Heterogeneous Deep Machine Learning Models]](https://github.com/scottgs/FuzzyFusion_DeepLearning_Tutorial): **PyTorch** Introduction, Transfer learning DCNNs, Data-driven Fuzzy Choquet Integral.
+
+`05` Kubernetes Cluster Modulation System called Sprinkler: it serves to prevent certain dockerd vulnerabilities from bringing about a cascading systemwide failure by listening to and filtering docker events and terminating containers that will trigger the cascading failure. This manifests as consuming RAM and storage space which paralyzes our systems. I have led the root cause analysis, and pinpointed the vulnerable code, but we created this system which is non-centeralized and external to Kubernetes to future-proof similar situations.
+
+`05` First research paper submission. See also my [Publications](/pub) page.
+
+`04` PhD Qualifying Exam. This has established my main research direction: the ideology of Superpixel Image Analysis
+
+`02` Hotwings job submission system based on **Celery** and **Kubernetes**. It is mostly a proof-of-concept at the time which consists of OS provisioning, Kubernetes cluster provisioning, service routing, storage provisioning, job processing and scheduling. It is designed to not only manage GPU workflows, but more importantly, allows unallocated infrastructure to be quickly turned into a pool of computing resources available to researchers or students on demand.
+
+
 # 2018
 
-`07` Learned high-throughput computing (HTC) systems using the national Open Science Grid (OSG) at University of Wisconsin.
+`10` Started this blog to document my experiences. This website is designed to be self-sustaining to minimize maintaince effort, thanks to **Gatsby** and **Netlify**. The contents are compiled from Markdown source files and the deployment is git-driven.
 
-`06` IEEE Big Data Cup...
+`10` Started playbook-rs which is a YAML based **Docker**/**Kubernetes** workflow orchestration system. This creates a template to organize my research projects.
+
+`10` Created a **Celery** based job submission system that allowed students to submit GPU workflows to our own infrastructure. Hundreds of deep learning jobs **(TensorFlow)** were submitted through and executed in an orderly manner.
+
+`09` Created a system that allow students to provision their own **AWS EMR** clusters and keeps track of and enforces limits on these clusters. It is used for a Spark learning environment. It also relates EBS persistent volumes to student accounts so that students can save/resume their projects without having the cluster turned on all the time. It transparently distributes security keys and secrets and collaborates with **LastPass**. There were almost 100 clusters in use with over 10 concurrency at any moment. I have supported the system for several months.
+
+`08` Started programming in **Rust**. This has turned out to be very helpful and has enabled me to write better C++ programs as well.
+
+`07` Learned about high-throughput computing (HTC) systems, especially **HTCondor**, using the national Open Science Grid (OSG) at University of Wisconsin.
 
 `06` Started contributing to an internal version of **Keras** framework for research use, and extending Keras and TensorFlow capabilities with novel operations and more flexible design patterns.
 
@@ -59,4 +82,4 @@ Implemented automatic legal document (.docx) generation, which is a trending fea
 
 # 2010
 
-`??` I was programming ARM Cortex-M, megaAVR, STM51 chips and playing with LM amplifiers, 74 logic chips, 78 voltage regulators, etc, in high school out of interest, and just began to win some programming competitions here and there.
+`??` Learned to program ARM Cortex-M, megaAVR, STM51 chips and playing with LM amplifiers, 74 logic chips, 78 voltage regulators, etc, in high school out of interest, and just began to win some programming competitions here and there.
