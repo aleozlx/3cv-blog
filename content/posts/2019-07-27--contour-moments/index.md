@@ -56,7 +56,7 @@ $$
 
 ![Example 3](ex3.png)
 
-As an logical extension to any polygons:
+As a logical extension to any polygons:
 
 $$
 A = \sum_i A\left(P_{i-1}, P_i\right) = \frac{1}{2} \sum_i \det \left(\begin{matrix}P_{i-1}^T\\P_i^T\end{matrix}\right)
