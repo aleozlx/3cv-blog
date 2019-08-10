@@ -1,5 +1,5 @@
 ---
-title: Contour Moments
+title: Contour Moments (pt. I)
 subTitle: What can you know by "walking around" an arbitrary region?
 cover: LA.png
 category: "Maths"
@@ -21,7 +21,7 @@ $$
 
 Now let's use four area calculation examples to verify that this is true.
 As area is not a quantity that should depend on the choice of coordinate system,
-without loss of generosity, we assume the contour $C$ passes through the origin, i.e. $(0,0) \in C$.
+without loss of generality, we assume the contour $C$ passes through the origin, i.e. $(0,0) \in C$.
 
 **Example 1**
 
@@ -56,11 +56,15 @@ $$
 
 ![Example 3](ex3.png)
 
+As an logical extension to any polygons:
+
 $$
 A = \sum_i A\left(P_{i-1}, P_i\right) = \frac{1}{2} \sum_i \det \left(\begin{matrix}P_{i-1}^T\\P_i^T\end{matrix}\right)
 $$
 
 **Example 4**
+
+Towards the limit of a "continuous shape":
 
 $$
 A = \frac{1}{2} \oint_C \det \left(\begin{matrix}x&&y\\x+dx&&y+dy\end{matrix}\right)
@@ -68,56 +72,12 @@ A = \frac{1}{2} \oint_C \det \left(\begin{matrix}x&&y\\x+dx&&y+dy\end{matrix}\ri
 = \iint_D \mathrm{d}x\mathrm{d}y
 $$
 
-## Calculate other moments using Green's theorem
+Up to this point, it is shown that the initial conjecture is correct.
+In pt. II, it will be generalized to calculating higher order moments through Green's theorem.
+Specifically, we will study
 
 $$
-\oint_C Ldx + Mdy = \iint_D \left(\frac{\partial M}{\partial x} -\frac{\partial L}{\partial y}\right) \mathrm{d}x \mathrm{d}y
+\oint_C f(x,y) \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right)
 $$
 
-$$
-\oint_C f(x,y) \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right) = \iint_{\textbf{p} \in D} \left(\nabla f \cdot \textbf{p} + 2f \right)\mathrm{d}x \mathrm{d}y
-$$
-
-**First Order**
-
-$$
-\nabla f \cdot \textbf{p} + 2f = x
-$$
-
-By a comparison of the left handside and right handside of the equation,
-
-$$
-\nabla f = (c, 0) \Rightarrow f(x,y)=cx
-$$
-
-By back substitution, we can obtain:
-
-$$
-c=\frac{1}{3}
-$$
-
-In conclusion, the first order moment can be calculated as:
-
-$$
-M_{10}=\frac{1}{3} \oint_C x \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right)
-$$
-
-In a discrete form, it is found to be equivalent to:
-
-$$
-M_{10}=\frac{1}{3} \sum_i \frac{1}{2} (P_i + P_{i-1})^T \textbf{e}_1 \det \left(\begin{matrix}P_{i-1}^T\\P_i^T\end{matrix}\right)
-$$
-
-But in general, it is relatively simple to obtain the continuous form of contour moments by solving a differential equation, much harder to derive the discrete form from the continuous form.
-
-**Second Order**
-
-Using a similar technique,
-
-$$
-M_{20}=\frac{1}{4} \oint_C x^2 \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right)
-$$
-
-$$
-M_{11}=\frac{1}{4} \oint_C xy \det \left( \begin{matrix}x && y \\ \mathrm{d}x && \mathrm{d}y\end{matrix}\right)
-$$
+where $f(x,y) = x^\alpha y^\beta$.
