@@ -112,7 +112,7 @@ M_{20}= \iint_D x^2 \mathrm{d}A=\frac{1}{4} \sum_i \frac{1}{3}\left( x_{i-1}^2 +
 $$
 
 $$
-M_{20}= \iint_D y^2 \mathrm{d}A=\frac{1}{4} \sum_i \frac{1}{3}\left( y_{i-1}^2 + y_{i-1} y_i + y_i^2 \right) \left|\begin{matrix}x_{i-1} && y_{i-1}\\x_i && y_i\end{matrix}\right|
+M_{02}= \iint_D y^2 \mathrm{d}A=\frac{1}{4} \sum_i \frac{1}{3}\left( y_{i-1}^2 + y_{i-1} y_i + y_i^2 \right) \left|\begin{matrix}x_{i-1} && y_{i-1}\\x_i && y_i\end{matrix}\right|
 $$
 
 $$
@@ -122,4 +122,4 @@ $$
 **Concluding Remarks**
 
 Shall we move on to the third order? I'm sure there is an emerging pattern to doing this, but I am not a mathematician.
-Nevertheless it is worthwhile to point out that it is overwhelmingly more efficient to compute $\sum_i$ side of the equation on CPU than running the $\iint_D$ side of the equation on GPU by plugging in every pixel at the same time, even though you always can.
+Nevertheless it is worthwhile to point out that it is overwhelmingly more efficient to compute $\sum_i$ side of the equation, even feasible on CPU, than running the $\iint_D$ side of the equation on GPU by plugging in every pixel at the same time.
