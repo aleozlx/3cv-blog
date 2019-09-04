@@ -5,9 +5,11 @@ menuTitle: Curriculum Vitae
 
 # 2019
 
-`07` Started a Superpixel Analyser project.
+`08` On site support a two-day Python programming training session with [USDA - LTAR (US Department of Agriculture)](https://www.ars.usda.gov/). I helped create some of the contents and I answered questions and assisted troubleshooting as we walked through many aspects of the Python language and the Flux dataset.
 
-`06` FuzzIEEE tutorial session [[Fuzzy Fusion of Decisions from Heterogeneous Deep Machine Learning Models]](https://github.com/scottgs/FuzzyFusion_DeepLearning_Tutorial): **PyTorch** Introduction, Transfer learning DCNNs, Data-driven Fuzzy Choquet Integral.
+`07` Started a Superpixel Analyser project. It is a C++ side project that assists my research and mainly involves OpenCV, TensorFlow, PostGIS and ImGui. It is capable of performing many superpixel based calculations at well over 100 FPS at resolutions most suitable for DCNN inference.
+
+`06` [A FuzzIEEE 2019](https://attend.ieee.org/fuzzieee-2019/) tutorial session [[Fuzzy Fusion of Decisions from Heterogeneous Deep Machine Learning Models]](https://github.com/scottgs/FuzzyFusion_DeepLearning_Tutorial): **PyTorch** Introduction, Transfer learning DCNNs, Data-driven Fuzzy Choquet Integral. I created contents for part I and II, and have participated in the conference to support the tutorial on-site and learn from many of the cool academic presentations available at the conference. I also worked a few shifts at the registration desk. The conference and program chairs included Dr. Jim Keller and Dr. Derek Anderson from MU, two of my personally most respected professors, and I had a great pleasure and learned a great deal talking with them throughout the conference.
 
 `05` Kubernetes Cluster Modulation System called Sprinkler: it serves to prevent certain dockerd vulnerabilities from bringing about a cascading systemwide failure by listening to and filtering docker events and terminating containers that will trigger the cascading failure. This manifests as consuming RAM and storage space which paralyzes our systems. I have led the root cause analysis, and pinpointed the vulnerable code, but we created this system which is non-centeralized and external to Kubernetes to future-proof similar situations.
 
@@ -82,4 +84,4 @@ Implemented automatic legal document (.docx) generation, which is a trending fea
 
 # 2010
 
-`??` Learned to program ARM Cortex-M, megaAVR, STM51 chips and playing with LM amplifiers, 74 logic chips, 78 voltage regulators, etc, in high school out of interest, and just began to win some programming competitions here and there.
+`??` Learned to program ARM Cortex-M, megaAVR, STM51 processors and got to play with some electronics and win some competitions by the way. Just writing this down so it can help me retain that memory.
