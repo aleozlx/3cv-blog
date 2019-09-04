@@ -5,15 +5,25 @@ menuTitle: Curriculum Vitae
 
 # 2019
 
+`11` KubeCon 2019 Conference Attendence.
+
+`10` IEEE AIPR 2019 Conference Attendence.
+
+`09` Assist developing a new and more stable strategy to provision MUDSA systems.
+
+`09` MUDSA Applied Machine Learning course material revision, reorganize for better delivery and new contents! And the usual forum support and grading.
+
 `08` On site support a two-day Python programming training session with [USDA - LTAR (US Department of Agriculture)](https://www.ars.usda.gov/). I helped create some of the contents and I answered questions and assisted troubleshooting as we walked through many aspects of the Python language and the Flux dataset.
 
 `07` Started a Superpixel Analyser project. It is a C++ side project that assists my research and mainly involves OpenCV, TensorFlow, PostGIS and ImGui. It is capable of performing many superpixel based calculations at well over 100 FPS at resolutions most suitable for DCNN inference.
 
+`06` IEEE AIPR 2019 Paper "Efficient Passive Sensing Monocular Relative Depth Estimation".
+
 `06` [A FuzzIEEE 2019](https://attend.ieee.org/fuzzieee-2019/) tutorial session [[Fuzzy Fusion of Decisions from Heterogeneous Deep Machine Learning Models]](https://github.com/scottgs/FuzzyFusion_DeepLearning_Tutorial): **PyTorch** Introduction, Transfer learning DCNNs, Data-driven Fuzzy Choquet Integral. I created contents for part I and II, and have participated in the conference to support the tutorial on-site and learn from many of the cool academic presentations available at the conference. I also worked a few shifts at the registration desk. The conference and program chairs included Dr. Jim Keller and Dr. Derek Anderson from MU, two of my personally most respected professors, and I had a great pleasure and learned a great deal talking with them throughout the conference.
 
-`05` Kubernetes Cluster Modulation System called Sprinkler: it serves to prevent certain dockerd vulnerabilities from bringing about a cascading systemwide failure by listening to and filtering docker events and terminating containers that will trigger the cascading failure. This manifests as consuming RAM and storage space which paralyzes our systems. I have led the root cause analysis, and pinpointed the vulnerable code, but we created this system which is non-centeralized and external to Kubernetes to future-proof similar situations.
+`05` Kubernetes Cluster Modulation System called Sprinkler: it serves to prevent certain dockerd vulnerabilities from bringing about a cascading systemwide failure by listening to and filtering docker events and terminating containers that will trigger the cascading failure. This manifests as consuming RAM and storage space which paralyzes our systems. I have led the root cause analysis, and pinpointed the vulnerable code, but we created this system which is non-centeralized and external to Kubernetes to future-proof similar situations. (MUDSA)
 
-`05` First research paper submission. See also my [Publications](/pub) page.
+`05` First research paper submission for IEEE BigData 2019. See also my [Publications](/pub) page.
 
 `04` PhD Qualifying Exam. This has established my main research direction: the ideology of Superpixel Image Analysis
 
@@ -26,34 +36,34 @@ menuTitle: Curriculum Vitae
 
 `10` Started playbook-rs which is a YAML based **Docker**/**Kubernetes** workflow orchestration system. This creates a template to organize my research projects.
 
-`10` Created a **Celery** based job submission system that allowed students to submit GPU workflows to our own infrastructure. Hundreds of deep learning jobs **(TensorFlow)** were submitted through and executed in an orderly manner.
+`10` Created a **Celery** based job submission system that allowed students to submit GPU workflows to our own infrastructure. Hundreds of deep learning jobs **(TensorFlow)** were submitted through and executed in an orderly manner. (MUDSA)
 
-`09` Created a system that allow students to provision their own **AWS EMR** clusters and keeps track of and enforces limits on these clusters. It is used for a Spark learning environment. It also relates EBS persistent volumes to student accounts so that students can save/resume their projects without having the cluster turned on all the time. It transparently distributes security keys and secrets and collaborates with **LastPass**. There were almost 100 clusters in use with over 10 concurrency at any moment. I have supported the system for several months.
+`09` Created a system that allow (MUDSA) students to provision their own **AWS EMR** clusters and keeps track of and enforces limits on these clusters. It is used for a Spark learning environment. It also relates EBS persistent volumes to student accounts so that students can save/resume their projects without having the cluster turned on all the time. It transparently distributes security keys and secrets and collaborates with **LastPass**. There were almost 100 clusters in use with over 10 concurrency at any moment. I have supported the system for several months.
 
-`08` Started programming in **Rust**. This has turned out to be very helpful and has enabled me to write better C++ programs as well.
+`08` Started programming in **Rust**. This has turned out to be very helpful and has enabled me to write better C++ programs as well. Life-time is a quite implicit thing to thing about in many programming languages, but is ubiquitously applicable.
 
 `07` Learned about high-throughput computing (HTC) systems, especially **HTCondor**, using the national Open Science Grid (OSG) at University of Wisconsin.
 
-`06` Started contributing to an internal version of **Keras** framework for research use, and extending Keras and TensorFlow capabilities with novel operations and more flexible design patterns.
+`06` Started contributing to an internal version of **Keras** framework at Center for Geospatial Intelligence (CGI, although I don't work for them) for research use, and extending Keras and TensorFlow capabilities with novel operations and more flexible design patterns.
 
-`05` Automated **Cloudera Distributed Hadoop** cluster provisioning with **Ansible** and supported provisioning and maintaince of multiple clusters used by different academic programs.
+`05` Automated **Cloudera Distributed Hadoop** cluster provisioning with **Ansible** and supported provisioning and maintaince of multiple clusters used by MUDSA and some other research from MU Informatics Institute (MUII), where MUDSA belongs.
 
 `02` Organized Algorithm Practice weekly sessions in form of small group, that helps people practice interview and problem solving strategies with an emphasis on algorithm accuracy and efficiency reasoning.
 
-`01` Supported **Advanced Data Visualization**, a course of **Data Science and Analytics Program**, that involves data visualization techniques using **R**, **ggplot**, **Plotly**, **Shiny**, etc. Developed code for **Shiny** labs as course material. 
+`01` Supported **Advanced Data Visualization**, a course from MUDSA, that involves data visualization techniques using **R**, **ggplot**, **Plotly**, **Shiny**, etc. Developed code for **Shiny** labs as course material. 
 
 # 2017
 
-`12` Researched and maintained **Cloudera Distributed Hadoop** infrastructure for **Data Science and Analytics Program** in order to help support technical needs with **Spark** and **Drill** usage in course materials. Developed ways to tie these computation resources to **JupyterHub** educational environment. Created detailed documentations for sustainable maintaince.
+`12` Researched and maintained **Cloudera Distributed Hadoop** infrastructure for MUDSA in order to help support technical needs with **Spark** and **Drill** usage in course materials. Developed ways to tie these computation resources to **JupyterHub** educational environment. Created detailed documentations for sustainable maintaince.
 
 `12` Graduated from **University of Missouri** with a Master's Degree in Computer Science, and continue on to a PhD degree. Completed and defended Master's Thesis: RELATIVE DEPTH ESTIMATION FROM SINGLE MONOCULAR IMAGES WITH DEEP CONVOLUTIONAL NETWORK. It is based on VGG deep convolutional network, Superpixel and Conditional Random Field, implemented using **TensorFlow** and **CUDA**.
 
 `08` Led an **Mizzou Computing Association** Special Interest Group: Scientific Computing using Python,
 that introduces various topics from data carpentery to machine learning to college students, with whiteboard theory sessions and open source materials.
 
-`06` Put together course materials and code for labs and exercises for a graduate level Data Science Emphasis Area course: **Applied Machine Learning from Data Analytics**. Students learn from concepts and API usage to an in-depth understanding of how to select appropriate techniques for various data science tasks and operationalize their workflow. Topics cover a spectrum from simple Bayesian modeling to more advanced algorithms such as support vector machines, decision trees/forests, and neural networks. Technologies mainly involve **Scipy** stack, **Scikit-learn**, **TensorFlow** and **SparkML**.
+`06` Put together course materials and code for labs and exercises for a graduate level Data Science Emphasis Area course: **Applied Machine Learning from Data Analytics**, for MUDSA. Students learn from concepts and API usage to an in-depth understanding of how to select appropriate techniques for various data science tasks and operationalize their workflow. Topics cover a spectrum from simple Bayesian modeling to more advanced algorithms such as support vector machines, decision trees/forests, and neural networks. Technologies mainly involve **Scipy** stack, **Scikit-learn**, **TensorFlow** and **SparkML**.
 
-`06` Started working for **Data Science and Analytics Master's Program** at **University of Missouri** as GRA/GTA, developing course materials, researching infrastructure technologies and supporting students online.
+`06` Started working for **Data Science and Analytics Master's Program** at **University of Missouri** (MUDSA) as GRA/GTA, developing course materials, researching infrastructure technologies and supporting students online.
 
 `02` Organized Technical Interview Prep weekly sessions in form of small group, that helps people practice interview and problem solving strategies by whiteboard coding and brainstorming possible solutions.
 
