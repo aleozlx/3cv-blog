@@ -72,13 +72,18 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   });
 };
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
   switch (stage) {
     case "build-javascript":
       {
         let components = store.getState().pages.map(page => page.componentChunkName);
         components = _.uniq(components);
-        config.plugin("CommonsChunkPlugin", webpack.optimize.CommonsChunkPlugin, [
+          actions.setWebpackConfig({
+            plugins: [],
+          })
+      }
+  }
+          /*config.plugin("CommonsChunkPlugin", webpack.optimize.CommonsChunkPlugin, [
           {
             name: `commons`,
             chunks: [`app`, ...components],
@@ -94,22 +99,13 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
             }
           }
         ]);
-        // config.plugin("BundleAnalyzerPlugin", BundleAnalyzerPlugin, [
-        //   {
-        //     analyzerMode: "static",
-        //     reportFilename: "./report/treemap.html",
-        //     openAnalyzer: true,
-        //     logLevel: "error",
-        //     defaultSizes: "gzip"
-        //   }
-        // ]);
       }
       break;
   }
-  return config;
+  return config;*/
 };
 
-exports.modifyBabelrc = ({ babelrc }) => {
+exports.onCreateBabelConfig = ({ babelrc }) => {
   return {
     ...babelrc,
     plugins: babelrc.plugins.concat([`syntax-dynamic-import`, `dynamic-import-webpack`])
