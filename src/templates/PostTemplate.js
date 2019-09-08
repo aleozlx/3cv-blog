@@ -1,16 +1,20 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Main from "../components/Main/";
+import { graphql } from "gatsby";
 import { connect } from "react-redux";
-require("core-js/fn/array/find");
-require("prismjs/themes/prism-okaidia.css");
-require("katex/dist/katex.min.css");
 
 import { setNavigatorPosition, setNavigatorShape } from "../state/store";
 import { moveNavigatorAside } from "../utils/shared";
+
+import Main from "../components/Main/";
 import Post from "../components/Post/";
 import Footer from "../components/Footer/";
 import Seo from "../components/Seo";
+
+import "katex/dist/katex.min.css";
+
+require("core-js/fn/array/find");
+require("prismjs/themes/prism-okaidia.css");
 
 class PostTemplate extends React.Component {
   moveNavigatorAside = moveNavigatorAside.bind(this);
@@ -22,12 +26,12 @@ class PostTemplate extends React.Component {
   }
 
   render() {
-    const { data, pathContext } = this.props;
+    const { data, pageContext } = this.props;
     const facebook = (((data || {}).site || {}).siteMetadata || {}).facebook;
 
     return (
       <Main>
-        <Post post={data.post} slug={pathContext.slug} author={data.author} facebook={facebook} />
+        <Post post={data.post} slug={pageContext.slug} author={data.author} facebook={facebook} />
         <Footer footnote={data.footnote} />
         <Seo data={data.post} facebook={facebook} />
       </Main>
@@ -37,7 +41,7 @@ class PostTemplate extends React.Component {
 
 PostTemplate.propTypes = {
   data: PropTypes.object.isRequired,
-  pathContext: PropTypes.object.isRequired,
+  pageContext: PropTypes.object.isRequired,
   navigatorPosition: PropTypes.string.isRequired,
   setNavigatorPosition: PropTypes.func.isRequired,
   isWideScreen: PropTypes.bool.isRequired
@@ -55,7 +59,10 @@ const mapDispatchToProps = {
   setNavigatorShape
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(PostTemplate);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PostTemplate);
 
 //eslint-disable-next-line no-undef
 export const postQuery = graphql`
@@ -80,11 +87,11 @@ export const postQuery = graphql`
         }
       }
     }
-    author: markdownRemark(id: { regex: "/author/" }) {
+    author: markdownRemark(fileAbsolutePath: { regex: "/author/" }) {
       id
       html
     }
-    footnote: markdownRemark(id: { regex: "/footnote/" }) {
+    footnote: markdownRemark(fileAbsolutePath: { regex: "/footnote/" }) {
       id
       html
     }

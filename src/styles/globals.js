@@ -326,7 +326,7 @@ export default {
       "-webkit-text-size-adjust": "100%",
       "-moz-text-size-adjust": "none",
       "-ms-text-size-adjust": "100%",
-      fontFamily: theme.base.fonts.unstyledFamily,
+      fontFamily: theme.base.fonts.styledFamily,
       lineHeight: "1.15",
       textSizeAdjust: "100%"
     },
@@ -371,6 +371,13 @@ export default {
     },
     "input:-webkit-autofill": {
       "-webkit-box-shadow": "0 0 0 50px white inset"
+    },
+    ":not(pre) > code[class*='language-']": {
+      background: "#eee",
+      color: "#666",
+      textShadow: "none",
+      padding: "1px 5px",
+      borderRadius: "2px"
     }
   }
 };

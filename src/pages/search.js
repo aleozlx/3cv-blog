@@ -1,5 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { graphql } from "gatsby";
+
 require("core-js/fn/array/find");
 
 import Main from "../components/Main";

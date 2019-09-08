@@ -18,7 +18,6 @@ const theme = createMuiTheme({
       linesMargin: "20px"
     },
     fonts: {
-      unstyledFamily: `Arial`,
       styledFamily: "Open Sans",
       styledFonts: "300,400,600"
     }
@@ -153,7 +152,8 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: `Arial, sans-serif`,
-    fontSize: 16
+    fontSize: 16,
+    useNextVariants: true
   }
 });
 

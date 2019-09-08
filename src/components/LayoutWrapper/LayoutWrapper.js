@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import injectSheet from "react-jss";
 
-const styles = theme => ({
+const styles = {
   wrapper: {
     padding: "1px",
     position: "absolute",
@@ -16,11 +16,12 @@ const styles = theme => ({
       overflow: "visible"
     }
   }
-});
+};
 
 const LayoutWrapper = props => {
   const { classes, children } = props;
 
+  //return <div>{children}</div>;
   return <div className={classes.wrapper}>{children}</div>;
 };
 
