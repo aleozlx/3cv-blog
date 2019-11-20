@@ -143,6 +143,11 @@ export default {
       verticalAlign: "middle" /* 2 */
     },
 
+    "img.gatsby-resp-image-image": { // ALX: seems like a fix to image stretching
+      width: "auto !important",
+      left: "auto !important"
+    },
+
     /**
      * Hide the overflow in IE.
      */
