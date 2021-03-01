@@ -68,7 +68,7 @@
     "instantsearch.css": "^7.1.0",
     "jss": "^9.8.7",
     "katex": "^0.11.1",
-    "prismjs": "^1.15.0",
+    "prismjs": "^1.23.0",
     "react": "^16.12.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.12.0",
